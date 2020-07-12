@@ -10,6 +10,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * @author ：Evan
+ * 打印测试，ftpc具体写法参考这边的写法
+ */
 public class Main{
 
     public static void main(String[] args)  throws Exception {
@@ -29,7 +33,9 @@ public class Main{
         document.close();
         byte[] bytes = outputStream.toByteArray();
         //打印pdf
-        PdfCommon.printPdf( bytes,"Win32 Printer : PDF",1, widAndHei);
+        for(int i=0;i<2;i++) {
+            PdfCommon.printPdf( bytes, "Win32 Printer : PDF", 1, widAndHei );
+        }
         outputStream.close();
     }
 
