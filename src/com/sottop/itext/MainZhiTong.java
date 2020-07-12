@@ -32,12 +32,10 @@ public class MainZhiTong {
         ZhiTongPdf.outputZhiTongLabel(list,document,directContent,size);
         document.close();
         byte[] bytes = outputStream.toByteArray();
-        //打印多次pdf
-        for(int i=0;i<2;i++) {
-            PdfCommon.printPdf( bytes,  "Win32 Printer : PDF", 1, widAndHei );
-        }
+        //打印pdf(可以使用for循环打印多次)
+        PdfCommon.printPdf( bytes,  "Win32 Printer : PDF", 1, widAndHei );
         outputStream.close();
-        //https://github.com/evanZhangYiFeng/itext_print.git
+
     }
 
     public static List getZhiTongList(String charsetNameFrom,String charsetNameTo) throws UnsupportedEncodingException {

@@ -3,6 +3,7 @@ package com.sottop.itext;
 /**
  * 定义常量
  * @author :Evan
+ * gitHub地址：//https://github.com/evanZhangYiFeng/itext_print.git
  */
 public interface CommonValue {
     String TYPE_TEXT = "TEXT";
